@@ -1,2 +1,2 @@
--StyleMVVMCodeSnippets
+Style MVVM Code Snippets
 ======================
