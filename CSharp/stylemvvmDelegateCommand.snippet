@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Delegate Command</Title>
+      <Author>Decors</Author>
+      <Description></Description>
+      <HelpUrl></HelpUrl>
+      <Shortcut>stydelcmd</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>attribute</ID>
+          <ToolTip>Name of the attribute holding the DelegateCommand.</ToolTip>
+          <Default>myCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>commandname</ID>
+          <ToolTip>Name of the DelegateCommand.</ToolTip>
+          <Default>MyCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[private DelegateCommand $attribute$;
+
+        /// <summary>
+        /// Gets the $commandname$.
+        /// </summary>
+        public ICommand $commandname$
+        {
+            get
+            {
+                if ($attribute$ == null)
+                {
+                    $attribute$ = new DelegateCommand((x) => $end$);
+                }
+                return $attribute$;
+            }
+        }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
